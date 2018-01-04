@@ -1,0 +1,16 @@
+group 'com.ldg.astelaya'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+tasks.withType(JavaCompile){
+    options.encoding="UTF-8"
+}
+[compileJava,javadoc,compileTestJava]*.options*.encoding="UTF-8"
